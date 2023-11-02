@@ -1,0 +1,240 @@
+@font-face {
+    font-family: "Roboto";
+    src: url("../assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../assets/fonts/Roboto-Bold.ttf");
+}
+
+:root {
+    --Primary-Gradient: hsl(348, 100%, 66%);
+    --Third-Gradient: hsl(6, 100%, 66%);
+    --Fifth-Gradient: hsl(12, 100%, 63%);
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Error-Background: rgba(255, 70, 70, 0.404);
+}
+
+body {
+    font-family: "Roboto";
+}
+
+main {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Charcoal-Grey);
+    padding: 5em;
+}
+
+p {
+    text-align: justify;
+}
+
+input[type="submit"] {
+    padding: 1.3em;
+    background-color: var(--Dark-Slate-Grey);
+    border: none;
+    border-radius: 0.4em;
+    color: var(--White);
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.mail-input:invalid {
+    background-color: var(--Error-Background);
+    border-color: var(--Tomato);
+}
+
+.mail-input::placeholder {
+    color: var(--Grey);
+}
+
+input[type="submit"]:hover {
+    background-image: linear-gradient(
+        to right,
+        var(--Primary-Gradient),
+        var(--Third-Gradient),
+        var(--Fifth-Gradient)
+    );
+    box-shadow: 3px 10px 20px var(--Tomato);
+}
+
+.form-section {
+    transform: scale(0.8, 0.8);
+    padding: 1em;
+    padding-left: 2em;
+    background-color: var(--White);
+    border-radius: 1.5em;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 3em;
+}
+
+.form-section > div > h1 {
+    font-family: "Roboto-Bold";
+    font-size: 50px;
+    color: var(--Dark-Slate-Grey);
+}
+
+.form-section > div > p {
+    max-width: 375px;
+}
+
+ul {
+    list-style: url("../assets/images/icon-list.svg");
+    text-indent: 20px;
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+form {
+    display: grid;
+    gap: 1em;
+}
+
+.label-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.label-content > label {
+    font-size: smaller;
+}
+
+.label-content > span {
+    color: hsl(0, 100%, 68%);
+}
+
+form > input {
+    padding: 1em;
+    border-radius: 0.5em;
+    outline: none;
+    border: 1px solid var(--Grey);
+}
+
+form > input:hover {
+    border: 1px solid hsl(240, 1%, 43%);
+}
+
+form > input:focus {
+    border: 1px solid hsl(240, 1%, 43%);
+}
+
+.content-img-sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-img-sign-up > img {
+    width: 95%;
+    height: 90%;
+}
+
+.section-success-message {
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 375px;
+    padding: 2em;
+    border-radius: 1.5em;
+}
+
+.section-success-message > img {
+    height: 60px;
+    width: 60px;
+}
+
+.section-success-message > h1 {
+    font-size: 50px;
+}
+
+.section-success-message > p {
+    margin-bottom: 3em;
+}
+
+.user-mail {
+    font-weight: bold;
+}
+
+.attribution {
+    text-align: center;
+    background-color: var(--Dark-Slate-Grey);
+    padding: 1em;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1040px) {
+    .form-section {
+        display: grid;
+        justify-content: baseline;
+        align-items: baseline ;
+        padding: 0em;
+        width: 600px;
+        gap: 0em;
+    }
+
+    .content-form {
+        width: 600px;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content-img-sign-up {
+        display: block;
+    }
+    
+    .content-img-sign-up > picture > img {
+        width: 95%;
+    }
+}
+
+@media (max-width: 680px) {
+    .form-section {
+        width: 375px;
+    }
+
+    .content-form {
+        width: 100%;
+    }
+
+    .content-form > h1 {
+        font-size: 20px;
+    }
+
+    .content-img-sign-up > picture > img {
+        width: 100%;
+    }
+
+    .content-form > p {
+        width: 300px;
+    }
+
+    ul {
+        text-indent: 0em;
+    }
+
+    li {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 550px) {
+    .content-form > h1 {
+        font-size: 10px;
+    }
+}
