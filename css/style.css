@@ -90,7 +90,7 @@ input[type="submit"]:hover {
 }
 
 ul {
-    list-style: url("../assets/images/icon-list.svg");
+    list-style: url("https://raw.githubusercontent.com/Irwing-Dev/newsletter-success-message/main/assets/images/icon-list.svg");
     text-indent: 20px;
     margin-top: 2em;
     margin-bottom: 3em;

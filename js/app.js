@@ -10,13 +10,14 @@ const errorMessage = "Valid email required"
 btnSend.addEventListener("click", (e) => {
     e.preventDefault()
 
-    if (mailInput.style.borderColor == "var(--Tomato)" || mailInput.value == 0) {
+    if (mailInput.value.indexOf("@") == -1 ||
+    mailInput.value == "" ||
+    mailInput.value == null) {
         errorSpan.innerHTML = errorMessage
+        mailInput.focus();
     } else {
         formSect.style.display = "none"
         successSect.style.display = "flex"
         userSpan.innerHTML = mailInput.value
-        userMail.push(mailInput.value)
     }
 })
-
